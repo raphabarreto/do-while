@@ -8,7 +8,7 @@ function CommentList({ comments }) {
       <strong>Comentários ({comments.length})</strong>
 
       <ul>
-        {comments.map((comment) => (
+        {comments.map(comment => (
           <CommentItem key={comment.id} comment={comment} />
         ))}
       </ul>

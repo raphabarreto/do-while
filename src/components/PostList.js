@@ -13,13 +13,13 @@ export default function PostList() {
   useEffect(() => {
     api
       .get('https://jsonplaceholder.typicode.com/posts?_embed=comments')
-      .then((response) => {
+      .then(response => {
         setPosts(response.data);
       });
   }, []);
 
   const addNewPost = useCallback(
-    (e) => {
+    e => {
       e.preventDefault();
 
       setPosts([
@@ -35,19 +35,19 @@ export default function PostList() {
       setNewPostTitle('');
       setNewPostBody('');
     },
-    [newPostBody, newPostTitle, posts]
+    [newPostBody, newPostTitle, posts],
   );
 
   const postList = useMemo(
     () =>
-      posts.map((post) => ({
+      posts.map(post => ({
         ...post,
         titleMin:
           post.title.length > 40
             ? post.title.substr(0, 40).concat('...')
             : post.title,
       })),
-    [posts]
+    [posts],
   );
 
   return (
@@ -55,20 +55,20 @@ export default function PostList() {
       <form onSubmit={addNewPost}>
         <input
           placeholder="Título do seu post!"
-          onChange={(e) => setNewPostTitle(e.target.value)}
+          onChange={e => setNewPostTitle(e.target.value)}
           value={newPostTitle}
         />
 
         <textarea
           placeholder="Diga algo legal que achou durante o evento DoWhile 2020 :)"
-          onChange={(e) => setNewPostBody(e.target.value)}
+          onChange={e => setNewPostBody(e.target.value)}
           value={newPostBody}
         />
 
         <button type="submit">Publicar</button>
       </form>
       <div className="post-list">
-        {postList.map((post) => (
+        {postList.map(post => (
           <article key={post.id}>
             <strong>{post.titleMin}</strong>
             <p>{post.body}</p>
