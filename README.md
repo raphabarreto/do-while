@@ -49,12 +49,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org)
 - [React - Hooks](https://pt-br.reactjs.org/docs/hooks-reference.html)
+- [Styled Components](https://styled-components.com/)
 
 ---
 
 ## 💻 Projeto
 
-Esta aplicação foi construída para demonstrar o conhecimento que adquiri durante o [Workshop - Otimização de performance em React](https://github.com/patrickporto/workshop-performance-react)
+Esta aplicação foi construída para demonstrar o conhecimento que adquiri durante o [Workshop - Otimização de performance em React](https://github.com/patrickporto/workshop-performance-react) e também o [Workshop - Com amor, styled-components](https://github.com/hstrada/workshop-rocketseat-stylert-boilerplate)
+
+A minha motivação de fazer essa aplicação, foi graças aos desafios que o [DoWhile 2020](https://dowhile.rocketseat.com.br/evento/desafios) propôs, fazendo com que eu saísse da minha zona de conforto.
+
+Graças à Rocketseat, mais uma vez, adquiri conhecimento para ir para um próximo nível 🚀
 
 ---
 
