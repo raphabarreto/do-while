@@ -1,11 +1,6 @@
-:root {
-  --color-gradient: linear-gradient(
-    155.34deg,
-    #ff018e -0.59%,
-    #ffa17b 51.28%,
-    #ffcd1e
-  );
-}
+import { createGlobalStyle } from 'styled-components';
+
+export default createGlobalStyle`
 
 .App {
   background: #09090a;
@@ -26,8 +21,11 @@
 
 .post-list > article > p {
   line-height: 24px;
-  background: var(--color-gradient);
-  background-clip: text;
+  background-image: repeating-linear-gradient(155.34deg,
+    #ff018e -0.59%,
+    #ffa17b 51.28%,
+    #ffcd1e);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -97,3 +95,4 @@ form button {
   border-radius: 4px;
   padding: 8px 16px;
 }
+`;
